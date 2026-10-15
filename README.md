@@ -23,6 +23,7 @@ Every language folder has the same file names, so the language switch (top right
 - `zavarovanja.html` – insurance, valuation and claims
 - `o-nas.html` – about us and the team
 - `kontakt.html` – contact, map, WhatsApp / Viber
+- `izjava-o-varstvu-osebnih-podatkov.html` – privacy statement (linked from the footer and the booking form)
 
 Shared files: `css/style.css`, `js/main.js`, `img/`.
 

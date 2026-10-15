@@ -1,4 +1,4 @@
-B&G Avtomobili – nova spletna stran v12 (5 jezikov, menjava fotografij) (staticni HTML)
+B&G Avtomobili – nova spletna stran v13 (popravki po dokumentu BG_popravki) (staticni HTML)
 Slogan: Kdor pri B&G kupuje, z garancijo potuje.
 
 Jeziki (izbira desno zgoraj v glavi):
@@ -18,6 +18,7 @@ Struktura:
   zavarovanja.html  Zavarovanja, cenitev in prijava skode
   o-nas.html        O nas in ekipa
   kontakt.html      Kontakt, zemljevid, WhatsApp/Viber
+  izjava-o-varstvu-osebnih-podatkov.html  Izjava o varstvu osebnih podatkov (povezava v nogi in pri obrazcu)
   css/style.css     Vsi slogi (barve in pisave so v :root na vrhu datoteke) – skupni za vse jezike
   js/main.js        Mobilni meni, izbira jezika, animacija ob drsenju, obrazci – skupni za vse jezike
   img/              Fotografije (webp, spletna locljivost) in logotipi – skupne za vse jezike
@@ -31,6 +32,8 @@ Pred objavo:
   4. WhatsApp/Viber: povezave wa.me/386... in viber://chat?number=%2B386... ob vseh mobilnih stevilkah.
   5. Barva poudarka: spremenite --accent (in --accent-dark) v css/style.css.
   6. Zemljevid: vdelan Google Maps (iframe) na naslovnici in strani Kontakt; jezik zemljevida doloca parameter hl=.
-  7. Menjava fotografij na naslovnici: 8 fotografij (img/hero-*.webp), vsaka 6 sekund, s pretapljanjem.
+  7. Menjava fotografij na naslovnici: 9 fotografij (img/hero-*.webp), vsaka 6 sekund, s pretapljanjem.
      Fotografijo dodate/odstranite v index.html (blok photo-hero__slides) in ustrezno crtico v bloku hero-dots.
      Prva fotografija se nalozi takoj, ostale sproti (data-src), zato stran ostane hitra.
+  8. Obrazec za servis ima dve obvezni potrditvi (kontakt + izjava o varstvu podatkov); polji se imenujeta soglasje in varstvo-podatkov.
+  9. E-posta povsod: info@bg-avtomobili.si. Podatki podjetja (sedez, maticna st., ID za DDV, TRR) so v nogi vsake strani.
