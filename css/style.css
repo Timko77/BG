@@ -371,6 +371,7 @@ a.logo-tile--lg:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgb
 .input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(20, 21, 24, 0.08); }
 .checkbox { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: var(--ink-2); line-height: 1.5; }
 .checkbox input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--ink); flex: none; }
+.checkbox > span { flex: 1 1 auto; }
 .form-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 6px; }
 .form-msg { display: none; padding: 14px 18px; border-radius: 12px; background: var(--white); border: 1px solid var(--line); font-weight: 600; }
 .form-msg.is-visible { display: block; }
@@ -405,6 +406,32 @@ a.logo-tile--lg:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgb
 .footer-title { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark); }
 .footer-muted { color: var(--on-dark); }
 .footer-social { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.footer-col--brand .footer-slogan { color: var(--white); font-weight: 700; font-size: 18px; line-height: 1.4; max-width: 340px; }
+.footer-col--brand .footer-contact { font-weight: 700; align-self: flex-start; }
+.footer-col--brand .footer-contact + .footer-contact { margin-top: -10px; }
+.footer-col--brand .footer-social { align-self: flex-start; }
+.footer-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; }
+.footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.footer-bottom a:hover { color: var(--white); }
+.checkbox a { color: var(--ink); font-weight: 700; text-underline-offset: 3px; }
+.checkbox a:hover { color: var(--accent); }
+
+/* ---------- Pravna stran (izjava o varstvu osebnih podatkov) ---------- */
+.legal { max-width: 760px; }
+.legal h1 { margin-bottom: 8px; }
+.legal h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 40px 0 12px; }
+.legal h3 { font-size: 17px; font-weight: 700; margin: 24px 0 8px; }
+.legal p, .legal li { color: var(--ink-2); line-height: 1.65; }
+.legal p + p { margin-top: 12px; }
+.legal ul { list-style: disc; margin: 10px 0 0; padding-left: 22px; }
+.legal li + li { margin-top: 6px; }
+.legal a { color: var(--ink); font-weight: 600; }
+.legal .legal-meta { font-size: 14px; color: var(--muted); }
+.legal .legal-note { padding: 14px 18px; border-radius: 14px; background: var(--ground); font-size: 14px; color: var(--ink-2); }
+.legal dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 12px 0 0; }
+.legal dt { color: var(--muted); }
+.legal dd { margin: 0; color: var(--ink); }
+@media (max-width: 560px) { .legal dl { grid-template-columns: 1fr; gap: 2px; } .legal dd { margin-bottom: 8px; } }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; border-top: 1px solid var(--dark-line); padding-top: 28px; color: var(--on-dark); font-size: 14px; }
 .footer-bottom img { height: 48px; width: auto; opacity: 0.9; }
 
@@ -577,7 +604,7 @@ html:not(.js) .hero-dots, .hero-dots[hidden] { display: none; }
 
   /* Noga v dveh stolpcih */
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
-  .footer-col--brand { grid-column: 1 / -1; }
+  .footer-col--brand, .footer-col--company { grid-column: 1 / -1; }
   .site-footer .container { padding-top: 56px; gap: 40px; }
 }
 
