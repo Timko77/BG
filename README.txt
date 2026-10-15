@@ -1,4 +1,4 @@
-B&G Avtomobili – nova spletna stran v13 (popravki po dokumentu BG_popravki) (staticni HTML)
+B&G Avtomobili – nova spletna stran v14 (popravki + izvirne fotografije) (staticni HTML)
 Slogan: Kdor pri B&G kupuje, z garancijo potuje.
 
 Jeziki (izbira desno zgoraj v glavi):
@@ -32,7 +32,7 @@ Pred objavo:
   4. WhatsApp/Viber: povezave wa.me/386... in viber://chat?number=%2B386... ob vseh mobilnih stevilkah.
   5. Barva poudarka: spremenite --accent (in --accent-dark) v css/style.css.
   6. Zemljevid: vdelan Google Maps (iframe) na naslovnici in strani Kontakt; jezik zemljevida doloca parameter hl=.
-  7. Menjava fotografij na naslovnici: 9 fotografij (img/hero-*.webp), vsaka 6 sekund, s pretapljanjem.
+  7. Menjava fotografij na naslovnici: 8 fotografij (img/hero-*.webp), vsaka 6 sekund, s pretapljanjem.
      Fotografijo dodate/odstranite v index.html (blok photo-hero__slides) in ustrezno crtico v bloku hero-dots.
      Prva fotografija se nalozi takoj, ostale sproti (data-src), zato stran ostane hitra.
   8. Obrazec za servis ima dve obvezni potrditvi (kontakt + izjava o varstvu podatkov); polji se imenujeta soglasje in varstvo-podatkov.
