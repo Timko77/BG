@@ -316,6 +316,12 @@ a.logo-tile--lg:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgb
   transition: border-color .15s ease, box-shadow .15s ease;
 }
 .textarea { height: auto; padding: 12px 14px; resize: vertical; min-height: 110px; }
+.select {
+  -webkit-appearance: none; appearance: none; padding-right: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23141518' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 20px center; background-size: 16px 16px;
+}
+.select::-ms-expand { display: none; }
 .input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(20, 21, 24, 0.08); }
 .checkbox { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: var(--ink-2); line-height: 1.5; }
 .checkbox input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--ink); flex: none; }
@@ -338,6 +344,7 @@ a.logo-tile--lg:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgb
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 40px; }
 .footer-col { display: flex; flex-direction: column; gap: 12px; }
 .footer-col--brand { gap: 20px; }
+.footer-col--company { gap: 6px; line-height: 1.45; }
 .footer-col--brand img { height: 22px; width: auto; align-self: flex-start; }
 .footer-col--brand p { color: var(--on-dark); line-height: 1.6; max-width: 300px; }
 .footer-col a { color: var(--white); text-decoration: none; transition: color .15s ease; }
