@@ -558,13 +558,30 @@ html:not(.js) .hero-dots, .hero-dots[hidden] { display: none; }
   .site-footer .container { padding-top: 40px; gap: 32px; }
 }
 
-/* ---------- Servis na strani Kontakt: kartica čez celo širino ---------- */
-.servis-card { grid-column: 1 / -1; }
-@media (min-width: 769px) {
-  .servis-card { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 16px 28px !important; }
-  .servis-card .tags { margin-left: auto; }
+/* ---------- Kartice oseb: številke v isti vrsti, tudi če se oznaka prelomi v dve vrstici ---------- */
+.person-card > .stack, .person-card > .person__name { flex: 1 1 auto; }
+.person-card > .stack > .phone { margin-top: auto; }
+.person-card .pill--sm { height: 36px; padding-top: 0; padding-bottom: 0; }
+@media (max-width: 768px) {
+  .person-card { grid-template-rows: 1fr; grid-auto-rows: auto; }
+  .person-card > .stack { align-self: stretch; }
 }
-@media (max-width: 768px) { .person-card > .btn { grid-column: 1 / -1; width: 100%; } }
+/* Namizje: vrstice kartic (ikona, oznaka, številka, gumbi) poravnane čez celo vrsto */
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 769px) {
+    .grid--4 > .person-card { display: grid; grid-template-rows: subgrid; grid-row: span 4; align-content: start; }
+    .grid--4 > .person-card > .stack { display: contents; }
+    .grid--4 > .person-card > .stack > .phone { margin-top: -16px; }
+  }
+  @media (max-width: 768px) {
+    .grid--4 > .person-card { grid-template-rows: subgrid; grid-row: span 3; }
+    .grid--4 > .person-card:has(> .stack) > .avatar { grid-row: 1 / span 2; }
+    .grid--4 > .person-card > .stack { display: contents; }
+    .grid--4 > .person-card > .stack > * { grid-column: 2; }
+    .grid--4 > .person-card > .stack > .label { align-self: end; }
+    .grid--4 > .person-card > .stack > .phone { align-self: start; margin-top: -8px; }
+  }
+}
 
 /* ---------- Uvoz vozil ---------- */
 .uvoz-steps > div { padding: 24px 0; }
