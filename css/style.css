@@ -330,7 +330,7 @@ a.logo-tile--lg:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgb
 .checkbox { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: var(--ink-2); line-height: 1.5; }
 .checkbox input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--ink); flex: none; }
 .checkbox > span { flex: 1 1 auto; }
-.form-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 6px; }
+.form-foot { display: flex; align-items: center; justify-content: flex-end; gap: 16px; flex-wrap: wrap; padding-top: 6px; }
 .form-msg { display: none; padding: 14px 18px; border-radius: 12px; background: var(--white); border: 1px solid var(--line); font-weight: 600; }
 .form-msg.is-visible { display: block; }
 
