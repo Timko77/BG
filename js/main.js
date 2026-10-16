@@ -146,6 +146,13 @@
     if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
   }
 
+  /* Želeni datum: preteklih datumov ni mogoče izbrati */
+  var now = new Date();
+  var today = now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2);
+  document.querySelectorAll('input[type="date"]').forEach(function (input) {
+    if (!input.min) input.min = today;
+  });
+
   /* Obrazci: dokler niso povezani s strežnikom, prikažemo sporočilo namesto pošiljanja.
      Povezava s strežnikom: nastavite action="..." in method="post" na <form> ter odstranite data-demo. */
   document.querySelectorAll('form[data-demo]').forEach(function (form) {
