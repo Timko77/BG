@@ -558,14 +558,6 @@ html:not(.js) .hero-dots, .hero-dots[hidden] { display: none; }
   .site-footer .container { padding-top: 40px; gap: 32px; }
 }
 
-/* ---------- Servis na strani Kontakt: kartica čez celo širino ---------- */
-.servis-card { grid-column: 1 / -1; }
-@media (min-width: 769px) {
-  .servis-card { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 16px 28px !important; }
-  .servis-card .tags { margin-left: auto; }
-}
-@media (max-width: 768px) { .person-card > .btn { grid-column: 1 / -1; width: 100%; } }
-
 /* ---------- Uvoz vozil ---------- */
 .uvoz-steps > div { padding: 24px 0; }
 .uvoz-steps .num-label { min-width: 28px; }
