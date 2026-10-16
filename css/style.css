@@ -323,6 +323,9 @@ a.logo-tile--lg:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgb
   background-repeat: no-repeat; background-position: right 20px center; background-size: 16px 16px;
 }
 .select::-ms-expand { display: none; }
+.field { min-width: 0; } /* polje v mreži se ne sme razširiti čez okvir */
+.input[type="date"] { -webkit-appearance: none; appearance: none; display: block; min-width: 0; max-width: 100%; text-align: left; }
+.input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
 .input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(20, 21, 24, 0.08); }
 .checkbox { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: var(--ink-2); line-height: 1.5; }
 .checkbox input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--ink); flex: none; }
@@ -629,3 +632,10 @@ html:not(.js) .hero-dots, .hero-dots[hidden] { display: none; }
 :root:lang(ru) :is(.h1, .h2, .h2--sm, .phone, .person__name b, .stat .num),
 :root:lang(sr) :is(.h1, .h2, .h2--sm, .phone, .person__name b, .stat .num) { letter-spacing: -0.012em; }
 :root:lang(ru) .h3, :root:lang(sr) .h3 { letter-spacing: 0; }
+
+/* Telefon: v glavi namesto gumba »Servis« okrogel gumb s slušalko, ki pokliče podjetje */
+@media (max-width: 640px) {
+  .header-actions .btn--phone { display: inline-flex; width: 46px; height: 46px; padding: 0; border: 0; background: var(--accent); color: var(--white); }
+  .header-actions .btn--phone:hover { background: var(--accent-dark); color: var(--white); }
+  .header-actions .btn--primary { display: none; }
+}
